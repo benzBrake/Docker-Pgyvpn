@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 ARCH=$(uname -m)
 if [[ $ARCH =~ "arm" ]]; then
     DOWNLOAD_LINK="https://pgy.oray.com/package/dl?id=58"
