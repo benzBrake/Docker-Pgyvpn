@@ -14,6 +14,7 @@ else
         echo "Do not support your system arch:"$(uname -m)
         exit 1
     fi
+    curl -SL "${DOWNLOAD_LINK}" -o /tmp/pygvpn.rpm
     rpm --nodeps -i /tmp/pygvpn.rpm
     rm -f /tmp/pygvpn.rpm
 fi
