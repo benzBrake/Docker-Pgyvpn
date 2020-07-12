@@ -8,7 +8,7 @@ on:
     paths-ignore:
       - "README.md"
 env:
-  IMAGE_NAME: alpine
+  IMAGE_NAME: pgyvpn
 jobs:
   buildx:
     runs-on: ubuntu-latest
