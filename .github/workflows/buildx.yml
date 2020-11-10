@@ -7,6 +7,8 @@ on:
       - v*
     paths-ignore:
       - "README.md"
+  schedule:
+    - cron: 0 0 * * 6
 env:
   IMAGE_NAME: pgyvpn
 jobs:
