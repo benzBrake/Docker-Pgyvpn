@@ -7,6 +7,6 @@ RUN \
 	set -ex && \
 	apk --update --no-cache add bash expect rpm libc6-compat libgcc libstdc++ musl dpkg && \
 	chmod +x /*.sh && \
-	/installPGY.sh &&
+	/installPGY.sh && \
 	rm -f /installPGY.sh
 ENTRYPOINT ["/entrypoint.sh"]
