@@ -14,3 +14,12 @@ docker run -d \
   --name pgyvpn \
   benzbrake/pgyvpn
 ```
+
+# 检查是否运行好了
+```
+ifconfig | grep oray
+```
+只要出现了相关网卡信息就可以了
+```
+oray_vnc: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1300
+```
