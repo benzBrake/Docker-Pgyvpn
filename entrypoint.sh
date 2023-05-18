@@ -1,14 +1,8 @@
 #!/bin/sh
-
-/usr/bin/expect <<EOF
-	spawn /usr/sbin/pgyvisitor login
-	expect "Please Enter Your Account or UID:"
-	send "${PGY_USERNAME}\r"
-	expect "Please Enter Your Password:"
-	send "${PGY_PASSWORD}\r"
-	expect "Auto Login"
-	send "y\r"
-	expect "Logged in successfully"
-	interact
-EOF
-/usr/share/pgyvpn/script/pgyvpn_monitor
+/usr/share/pgyvpn/script/pgyvpn_monitor >/dev/null 2>&1 &
+sleep 1
+/usr/sbin/pgyvisitor login -u ${PGY_USERNAME} -p ${PGY_PASSWORD}
+while true
+do
+        sleep 60
+done

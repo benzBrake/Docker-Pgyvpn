@@ -2,11 +2,11 @@ FROM benzbrake/alpine
 LABEL MAINTAINER Ryan Lieu <github-benzBrake@woai.ru>
 
 ENV PGY_USERNAME PGY_PASSOWRD
-COPY entrypoint.sh installPGY.sh /
+COPY installPGY.sh entrypoint.sh /
 RUN \
 	set -ex && \
-	apk --update --no-cache add bash expect rpm libc6-compat libgcc libstdc++ libuuid gcompat musl dpkg && \
-	chmod +x /*.sh && \
-	/installPGY.sh && \
-	rm -f /installPGY.sh
+	apk --update --no-cache add bash coreutils net-tools util-linux-dev openrc iptables libc6-compat libgcc libstdc++ libuuid gcompat musl dpkg && \
+	cd / && \
+	chmod +x *.sh && \
+	bash installPGY.sh
 ENTRYPOINT ["/entrypoint.sh"]
