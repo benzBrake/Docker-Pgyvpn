@@ -15,7 +15,7 @@ if [[ $ARCH =~ "arm" ]] || [[ $ARCH =~ "aarch" ]]; then
         exit 1
     fi
 else
-    if [[ $ARCH =~ "386" ]]; then
+    if [[ $ARCH =~ "386" ]] || [[ $ARCH =~ "686" ]]; then
         DOWNLOAD_LINK="https://pgy.oray.com/softwares/42/download/1838/PgyVisitor_CentOS_2.4.0.52291_i386.rpm"
     elif [[ $ARCH =~ "x86_64" ]]; then
         DOWNLOAD_LINK="https://pgy.oray.com/softwares/42/download/1838/PgyVisitor_CentOS_2.4.0.52291_x86_64.rpm"
